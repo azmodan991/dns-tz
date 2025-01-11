@@ -13,7 +13,7 @@
 
 # Инструкция запуска
 1. Если используется docker compose (рекомендованный вариант):
-  1.1 В папке с docker-compose.yaml выполнить команду ```docker compose up --build```
+  1.1 В папке с docker-compose.yaml выполнить команду ```docker compose up -d --build```
 2. Если использовать docker, необходимо выполнить последовательность команд
 	1. ```docker network create lemp-net```
 	2. В директории с Dockerfile - ```docker build -t lemp-stack .```
