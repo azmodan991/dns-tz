@@ -1,0 +1,19 @@
+services:
+  lemp-stack:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx
+      - ./php-fpm.d:/etc/php-fpm.d
+      - ./www:/var/www
+    networks:
+      - lemp-net
+    container_name: lemp-container
+    # restart: always
+
+networks:
+  lemp-net:
+    driver: bridge
